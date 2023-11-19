@@ -1,0 +1,48 @@
+@media screen and (max-width: 768px) {
+	#sidebar {
+		display: none !important;
+	}
+	#sidebar-mobile {
+		display: block !important;
+	}
+	#content {
+		margin: 0;
+	}
+	#content .content-wrapper {
+		padding: 0 !important;
+	}
+	#content .content-wrapper section.no-padding {
+		padding: 0 !important;
+	}
+	#topbar-mobile {
+		display: flex !important;
+	}
+	#content {
+		margin-top: 62px;
+	}
+	#imagen{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	:root {
+		--button-text-size: var(--text-size-md);
+		--mini-button-text-size: var(--text-size-sm);
+		--title-text-size: var(--text-size-lg);
+		--mini-title-text-size: var(--text-size-md);
+		--paragraphe-text-size: var(--text-size-sm);
+		--content-padding: 26px;
+		--sidebar-expand-width: 210px;
+		--sidebar-width: 70px;
+	}
+	#sidebar .sidebar-link .profile::after {
+		right: 12px !important;
+	}
+	#sidebar .sidebar-start {
+		margin-bottom: 0px !important;
+	}
+	#sidebar .sidebar-middle {
+		margin-top: 0 !important;
+	}
+}

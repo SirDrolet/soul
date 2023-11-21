@@ -45,7 +45,7 @@
     }
     </style>
 	<?php
-	$archivo = "archivo.txt";
+	$archivo = "archivo/archivo.txt";
 	$contador = intval(trim(file_get_contents($archivo)));
 
 	$file = fopen($archivo, "w");

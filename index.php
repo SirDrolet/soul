@@ -44,14 +44,17 @@
     --text-color-6:  #fef3e1;
     }
     </style>
-	<script>
-window.onload = function() {
-    var count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0;
-    count++;
-    localStorage.setItem('count', count);
-    document.getElementById('counter').innerHTML = '<i class="bi bi-person-fill"></i>' + count;
-}
-	</script>
+	<?php
+	$archivo = "archivo.txt";
+	$contador = intval(trim(file_get_contents($archivo)));
+
+	$file = fopen($archivo, "w");
+	fwrite($file, $contador+1 . PHP_EOL);
+
+	$file = fopen($archivo, "r");
+	echo '<div style="position:fixed;bottom:20px;z-index:9;right:20px;background: #ff5a19;padding: 2px 10px;color: #fff;font-size: 30px;border-radius: 20px;">'. fgets($file). '</div>' ;
+	fclose($file);
+	?>
 </head>
 <body>
 	<div id="app" class="home">
@@ -64,19 +67,19 @@ window.onload = function() {
                 </a>
 			</div>
 			<div class="sidebar-middle">
-				<a href="index.htm" class="sidebar-link opacity-0 "><i class="icon bi bi-house"></i><span class="text">Inicio</span></a>
+				<a href="index.php" class="sidebar-link opacity-0 "><i class="icon bi bi-house"></i><span class="text">Inicio</span></a>
 				<a href="eventos.htm" class="sidebar-link opacity-0 "><i class="icon bi bi-archive"></i><span class="text">Eventos</span> </a>
 				<a href="staff.htm" class="sidebar-link opacity-0  active "><i class="icon bi bi-person-circle"></i><span class="text">Staff</span></a>
 				<a href="creaciones.html" class="sidebar-link opacity-0  active "><i class="icon bi bi-bug"></i><span class="text">Descargas</span></a>
-				<a href="personal.html" class="sidebar-link opacity-0  active "><i class="icon bi bi-phone"></i><span class="text"> Contacto</span></a>
+				<a href="servicios.html" class="sidebar-link "><i class="icon bi bi-person-fill"></i><span class="text">Contacto</a>
 				<button data-toggle="sidebar-dropdown" data-dropdown-target="more" class="sidebar-link opacity-0"></button>
 			</div>
 			<div class="sidebar-end"></div>
 			<div class="sidebar-dropdown-body hide_noanim" data-dropdown-state="no" data-dropdown-id="more"></div>
 		</nav>
 		<nav id="sidebar-mobile" class="pb-4">
-			<a class="sidebar-image sidebar-link" href="index.htm"><span class="icon py-4"><img src="https://cdn.discordapp.com/attachments/974789490516303882/1174987878305112135/jypsiconoside.png?ex=656997bc&is=655722bc&hm=cd2b9feeb0c3b7ebbe9cf07d67a8d9d50b4f565ef77e4b4a3d2f6977f141e357&"></span></a>
-			<a href="index.htm" class="sidebar-link "><i class="icon bi bi-bell-fill"></i><span class="text">Inicio</span></a>
+			<a class="sidebar-image sidebar-link" href="index.php"><span class="icon py-4"><img src="https://cdn.discordapp.com/attachments/974789490516303882/1174987878305112135/jypsiconoside.png?ex=656997bc&is=655722bc&hm=cd2b9feeb0c3b7ebbe9cf07d67a8d9d50b4f565ef77e4b4a3d2f6977f141e357&"></span></a>
+			<a href="index.php" class="sidebar-link "><i class="icon bi bi-bell-fill"></i><span class="text">Inicio</span></a>
 			<a href="eventos.htm" class="sidebar-link "><i class="icon bi bi-balloon-fill"></i><span class="text">Eventos</span></a>
 			<a href="staff.htm" class="sidebar-link "><i class="icon bi bi-bag-fill"></i><span class="text">Staff</span></a>
 			<a href="creaciones.html" class="sidebar-link "><i class="icon bi bi-bookmark-fill"></i><span class="text">Descargas</span></a>
@@ -96,8 +99,21 @@ window.onload = function() {
                 </div>
             </div>
         </div>
-		<div id="counter-box">
-			<p id="counter">Cargando...</p>
+		<div id="a">
+			<div id="jyps">
+			  <p>Quien Soy Y Que Hago?</p>
+			</div>
+			<div id="textot">
+			  <p>Yo soy Jhon Yepes, pero todos mis amigos me llaman Jyps. Tengo 26 años, soy colombiano pero vivo actualmente en Alemania. Por ahora, estoy trabajando normalmente como todos los mortales hacemos y también hago streaming y creo contenido en las tardes/noches para interactuar con ustedes y disfrutar de las cosas que hago. De verdad, me alegra mucho que seas parte de nuestra comunidad. </p>
+			</div>
+		</div>
+		<div id="a2">
+			<div id="drolet">
+			  <p>DROLET</p>
+			</div>
+			<div id="textot2">
+			  <p>Hola soy Drolet,Soy programador semi senior y he querido ayudar a jyps obviamente no le pedi dinero y no este no es mi trabajo un 100% diria que es un 20% no mucho la verdad tambien se los lenguajes PHP,CSS,JS,JAVA,C+,C#,HTML y tambien soy desarollador de video juegos tambien creo eventos de minecraft ahora mismo estoy estudiando ING de sistemas,tambien soy informatico</p>
+			</div>
 		</div>
     </div>
 </main>

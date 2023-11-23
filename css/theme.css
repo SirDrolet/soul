@@ -48,14 +48,14 @@
 }
 
 body {
-	overflow: hidden;
+	overflow: auto;
 }
 
 #app {
 	display: flex;
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	overflow: auto;
 	color: var(--text-color-1);
 	font-family: 'Nunito', sans-serif;
 }

@@ -34,8 +34,7 @@
 }
 
 ::-webkit-scrollbar {
-	height: 12px;
-	width: 7px;
+	width: 0px;
 	background: rgba(255, 0, 191, 0);
 }
 
@@ -48,14 +47,14 @@
 }
 
 body {
-	overflow: auto;
+	overflow: hidden;
 }
 
 #app {
 	display: flex;
 	height: 100%;
 	width: 100%;
-	overflow: auto;
+	overflow: hidden;
 	color: var(--text-color-1);
 	font-family: 'Nunito', sans-serif;
 }

@@ -36,11 +36,11 @@
 ::-webkit-scrollbar {
 	height: 12px;
 	width: 7px;
-	background: rgba(255, 0, 191, 0.288);
+	background: rgba(255, 0, 191, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--text-color-3);
+	background: #00000000;
 }
 
 *::selection {
@@ -67,7 +67,7 @@ body {
 	width: 100%;
 	flex: 1;
 	overflow-y: auto; /* Agrega la barra de desplazamiento vertical */
-	overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+	overflow-x: auto; /* Oculta la barra de desplazamiento horizontal */
 	background-attachment: fixed;
 	background-size: cover;
 }

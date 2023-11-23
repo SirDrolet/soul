@@ -119,3 +119,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.querySelector('#sidebar-mobile').classList.remove('active')
 	})
 })
+// La IP y el puerto de tu servidor
+var url = 'https://api.mcsrvstat.us/2/free.x-host.es:2450';
+
+fetch(url)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        var statusIndicator = document.getElementById('statusIndicator');
+        var serverStatus = document.getElementById('serverStatus');
+        var playerCount = document.getElementById('playerCount');
+
+		if (data.online) {
+			statusIndicator.style.backgroundColor = 'green';
+			statusIndicator.style.boxShadow = '0px 0px 30px green';
+			serverStatus.textContent = 'El servidor esta encendido';
+			playerCount.innerHTML = '' + data.players.online;
+		} else {
+			statusIndicator.style.backgroundColor = 'red';
+			statusIndicator.style.boxShadow = '0px 0px 30px red';
+			serverStatus.textContent = 'El servidor esta apagado';
+			playerCount.innerHTML = '<i class="bi bi-people-fill"></i> 0';
+		}
+    })
+    .catch(function(error) {
+        console.log('Error: ' + error);
+    });
+	

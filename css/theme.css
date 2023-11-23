@@ -81,11 +81,9 @@ body {
 
 .imagen {
 	position: relative;
-	width: 70%;
-	left: 5%;
-	border-radius: 20px;
-	box-shadow: 0px 0px 40px white;
-	animation: floating 4.5s ease-in-out infinite
+	width: 40%;
+	left: 50%;
+	animation: floating 10.5s ease-in-out infinite
 }
 
 .floating {
@@ -155,19 +153,6 @@ body {
 	}
 }
 
-#cuadroexpli{
-	margin: 4px;
-	left: 10px;
-	width: 550px; /* Ajusta según sea necesario */
-	height: 370px; /* Ajusta según sea necesario */
-	position: relative; /* Esto permite que los elementos hijos posicionados absolutamente se posicionen en relación a este elemento */
-	background: rgba(0, 0, 0, 0.392); /* Ajusta según sea necesario */
-	border-radius: 15px; /* Ajusta según sea necesario */
-	box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el tamaño total del elemento */
-	padding: 10px; /* Ajusta según sea necesario */
-	border: 2px solid #4e4e4e;
-}
-
 #servercuadro{
 	left: 100px;
 	width: 350px; /* Ajusta según sea necesario */
@@ -178,6 +163,7 @@ body {
 	box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el tamaño total del elemento */
 	padding: 10px; /* Ajusta según sea necesario */
 	border: 2px solid #4e4e4e;
+	animation: floating 3s ease-in-out infinite
 }
 #serverStatus{
 	font-family: 'minecrafte', sans-serif;
@@ -210,6 +196,7 @@ body {
 	border: 2px solid #4e4e4e;
 	display: flex; /* Esto permite que los elementos hijos se alineen en una fila */
 	align-items: center; /* Esto centra los elementos hijos verticalmente */
+	animation: floating 3s ease-in-out infinite
 }
 
 #iconoplayers{
@@ -238,4 +225,107 @@ html, body {
 @font-face {
     font-family: 'minecrafte'; /* Puedes cambiar 'MiFuente' por el nombre que desees */
     src: url('../img/Minecrafter.Reg.ttf'); /* Asegúrate de reemplazar 'miFuente.ttf' con la ruta correcta a tu archivo .ttf */
+}
+
+
+#textocuadro{
+	font-family: 'minecrafte', sans-serif;
+	font-size: 2.8rem;
+	position: absolute;
+	top: 2px; /* Ajusta según sea necesario */
+	left: 80px; /* Ajusta según sea necesario */
+}
+
+#textodescri{
+	width: 520px;
+	position: absolute;
+	top: 70px; /* Ajusta según sea necesario */
+	left: 10px; /* Ajusta según sea necesario */
+	font-family: 'minecrafte', sans-serif;
+	color: #b1b1b1;
+}
+
+#cuadroexpli{
+	margin: 4px;
+	left: 10px;
+	width: 550px;
+	height: 370px;
+	position: relative;
+	background: rgba(0, 0, 0, 0.392);
+	border-radius: 15px;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 2px solid #4e4e4e;
+	animation: floating 3s ease-in-out infinite
+}
+#iconoinfoquiene{
+	margin-right: 10px; /* Esto crea espacio entre el icono y el texto */
+	width: 50px; /* Ajusta según sea necesario */
+	height: 50px; /* Ajusta según sea necesario */
+	background: rgba(133, 133, 133, 0.392); /* Ajusta según sea necesario */
+	border-radius: 20%; /* Esto hace que el icono sea un círculo */
+	font-size: 40px;
+	display: flex; /* Esto permite que el icono se centre en el cuadrado */
+	justify-content: center; /* Esto centra el icono horizontalmente */
+	align-items: center; /* Esto centra el icono verticalmente */	
+}
+#ipcuadro{
+	margin: 4px;
+	left: 10px;
+	width: 400px; /* Ajusta según sea necesario */
+	height: 70px; /* Ajusta según sea necesario */
+	position: relative; /* Esto permite que los elementos hijos posicionados absolutamente se posicionen en relación a este elemento */
+	background: rgba(0, 0, 0, 0.392); /* Ajusta según sea necesario */
+	border-radius: 15px; /* Ajusta según sea necesario */
+	box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el tamaño total del elemento */
+	padding: 10px; /* Ajusta según sea necesario */
+	border: 2px solid #4e4e4e;
+	display: flex; /* Esto permite que los elementos hijos se alineen en una fila */
+	align-items: center; /* Esto centra los elementos hijos verticalmente */
+	animation: floating 3s ease-in-out infinite
+}
+
+#iconoip{
+	margin-right: 10px; /* Esto crea espacio entre el icono y el texto */
+	width: 50px; /* Ajusta según sea necesario */
+	height: 50px; /* Ajusta según sea necesario */
+	background: rgba(133, 133, 133, 0.392); /* Ajusta según sea necesario */
+	border-radius: 20%; /* Esto hace que el icono sea un círculo */
+	font-size: 40px;
+	display: flex; /* Esto permite que el icono se centre en el cuadrado */
+	justify-content: center; /* Esto centra el icono horizontalmente */
+	align-items: center; /* Esto centra el icono verticalmente */
+}
+
+#textoip{
+	margin-top: 15px;
+	margin-left: 15px; /* Esto crea espacio entre el icono y el texto */
+	font-family: 'minecrafte', sans-serif;
+	font-size: 1.5rem;
+}
+
+#Botoncopiar{
+	margin-right: 20px; /* Esto crea espacio entre el icono y el texto */
+	width: 50px; /* Ajusta según sea necesario */
+	height: 50px; /* Ajusta según sea necesario */
+	background: rgba(133, 133, 133, 0.392); /* Ajusta según sea necesario */
+	border-radius: 20%; /* Esto hace que el icono sea un círculo */
+	font-size: 40px;
+	display: flex; /* Esto permite que el icono se centre en el cuadrado */
+	justify-content: center; /* Esto centra el icono horizontalmente */
+	align-items: center; /* Esto centra el icono verticalmente */
+	color: white;
+}
+
+#info{
+	margin-top: 130px;
+	margin-left: 3px; /* Esto crea espacio entre el icono y el texto */
+	font-family: 'minecrafte', sans-serif;
+	font-size: 1.5rem;
+}
+#textodescri2{
+	margin-top: 10px;
+	margin-left: 3px; /* Esto crea espacio entre el icono y el texto */
+	font-family: 'minecrafte', sans-serif;
+	font-size: 1.5rem;
 }

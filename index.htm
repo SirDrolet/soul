@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Pagina creada por DROLET">
     <!-- TITULO -->
-	<title>Under Of Soul • Inicio</title>
+	<title>Drolet • Inicio</title>
 	<!-- ICONO -->
 	<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1148161567142203432/1168380502621814874/nav.png?ex=656d3da3&is=655ac8a3&hm=c79fad4f102f5d3c713c45e9be76660dee3bf3b19f0fdf5f993fe5c3678ce58f&">
 	<!-- lINKS -->
@@ -58,7 +58,6 @@
 			<div class="sidebar-middle">
 				<a href="index.htm" class="sidebar-link opacity-0 "><i class="icon bi bi-house"></i><span class="text">Inicio</span></a>
 				<a href="eventos.htm" class="sidebar-link opacity-0 "><i class="icon bi bi-archive"></i><span class="text">Eventos</span> </a>
-				<a href="staff.htm" class="sidebar-link opacity-0  active "><i class="icon bi bi-person-circle"></i><span class="text">Staff</span></a>
 				<a href="creaciones.html" class="sidebar-link opacity-0  active "><i class="icon bi bi-bug"></i><span class="text">Descargas</span></a>
 				<a href="personal.html" class="sidebar-link opacity-0  active "><i class="icon bi bi-phone"></i><span class="text"> Contacto</span></a>
 				<button data-toggle="sidebar-dropdown" data-dropdown-target="more" class="sidebar-link opacity-0"></button>
@@ -70,7 +69,6 @@
 			<a class="sidebar-image sidebar-link" href="index.htm"><span class="icon py-4"><img src="https://cdn.discordapp.com/attachments/1148161567142203432/1168380502621814874/nav.png?ex=656d3da3&is=655ac8a3&hm=c79fad4f102f5d3c713c45e9be76660dee3bf3b19f0fdf5f993fe5c3678ce58f&"></span></a>
 			<a href="index.htm" class="sidebar-link "><i class="icon bi bi-bell-fill"></i><span class="text">Inicio</span></a>
 			<a href="eventos.htm" class="sidebar-link "><i class="icon bi bi-balloon-fill"></i><span class="text">Eventos</span></a>
-			<a href="staff.htm" class="sidebar-link "><i class="icon bi bi-bag-fill"></i><span class="text">Staff</span></a>
 			<a href="creaciones.html" class="sidebar-link "><i class="icon bi bi-bookmark-fill"></i><span class="text">Descargas</span></a>
 			<a href="servicios.html" class="sidebar-link "><i class="icon bi bi-person-fill"></i><span class="text">Contacto</a>
             <div data-toggle="close-sidebar" class="sidebar-close"><i class="bi bi-x-lg"></i></div>
@@ -78,7 +76,7 @@
 </body>
 <main id="content">
     <div class="content-wrapper">
-		<div class="position-absolute top-50 end-0 translate-middle-y"><img class="imagen" id="imagen" src="https://cdn.discordapp.com/attachments/1148161567142203432/1155382473795063888/Diseno_sin_titulo.png?ex=656c18c7&is=6559a3c7&hm=95dc97f7ab2740b157d28f5d23f6e2f5f151d01957fe471807a766984606a744&"></div>
+		<div class="position-absolute top-50 end-0 translate-middle-y"><img class="imagen" id="imagen" src="https://cdn.discordapp.com/attachments/1148161567142203432/1168380502621814874/nav.png?ex=656d3da3&is=655ac8a3&hm=c79fad4f102f5d3c713c45e9be76660dee3bf3b19f0fdf5f993fe5c3678ce58f&"></div>
 		<div style="padding-bottom:100px;" class="area">
 			<div id="topbar-mobile">
                 <div class="d-flex align-items-center">
@@ -93,12 +91,40 @@
 			<p id="serverStatus"></p>
 		</div>
 		<div id="cuadroexpli">
-
+			<i id="iconoinfoquiene" class="bi bi-mortarboard-fill"></i>
+			<p id="textocuadro">Quienes somos</p>
+			<p id="textodescri">Hola!.Somos de la comunidad del jyps y creamos un server de minecraft porque estabamos aburridos y si queres unirte unite no hay drama esta es la pagina oficial del servidor de minecraft igual recien arrancamos no hay mucho que digamos</p>
+			<p id="info">INFORMACION</p>
+			<p id="textodescri2">VERSION 1.20.1	a 1.8</p>
 		</div>
-		<div id="contadorcuadro">
-			<i id="iconoplayers" class="bi bi-person-fill"></i>
-			<p id="playerCount"></p>
+		<div style="display: flex;">
+			<div id="contadorcuadro">
+				<i id="iconoplayers" class="bi bi-person-fill"></i>
+				<p id="playerCount"></p>
+			</div>
+			<div id="ipcuadro">
+				<button id="Botoncopiar" onclick="myFunction()"><i id="iconoip" class="bi bi-clipboard"></i></button>
+				<p id="textoip">free.x-host.es:2450</p>
+			</div>
 		</div>
+		<script>
+			function myFunction() {
+			  /* Obtén el elemento de texto */
+			  var copyText = document.getElementById("textoip");
+			
+			  /* Selecciona el texto del elemento de texto */
+			  var range = document.createRange();
+			  range.selectNode(copyText);
+			  window.getSelection().removeAllRanges(); // limpia la selección actual
+			  window.getSelection().addRange(range); // para seleccionar el texto
+			
+			  /* Copia el texto al portapapeles */
+			  document.execCommand("copy");
+			
+			  /* Alerta al usuario que el texto ha sido copiado */
+			  alert("Copiado!");
+			}
+			</script>
     </div>
 </main>
 </html>
